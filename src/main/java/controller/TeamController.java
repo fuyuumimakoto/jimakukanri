@@ -183,7 +183,7 @@ public class TeamController {
 	}
 	
 	@RequestMapping("TeamAddUser")
-	 public ModelAndView TeamAddUser(String uid,int tid) {
+	 public ModelAndView TeamAddUser(String uid,int tid,int app_uid) {
 		
 		 
 		 TeamPageLoader teamPageLoader=new TeamPageLoader();
@@ -191,7 +191,7 @@ public class TeamController {
 		 
 		 int int_uid=pojo_getter.md5id2id(uid);
 		 
-		 teamPageLoader.agreeJoin(tid, int_uid);
+		 teamPageLoader.agreeJoin(tid, app_uid);
 
 	
 	
@@ -205,7 +205,8 @@ public class TeamController {
 		 }
 		 
 
-
+		 Team team=pojo_getter.TeamGetter(tid);
+			
 		
 		 
 			ModelAndView mav = new ModelAndView("team_info");
@@ -213,7 +214,7 @@ public class TeamController {
 		
 			mav.addObject("uid",uid);
 			mav.addObject("isleader",isleader);
-			mav.addObject("tid",tid);
+			mav.addObject("team",team);
 			mav.addObject("user_info_member",user_info_member);
 			mav.addObject("user_info_app",user_info_app);
 			

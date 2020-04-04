@@ -53,7 +53,7 @@ if(user_info_app!=null&&isleader.equals("1"))
 		out.write(
 		"<img src='/data/user/"+user_info_app.get(i).getId()+"/"+user_info_app.get(i).getIcon()+"'  width='50' height='50' >"+
 				"<a href='user_info?act_uid="+uid+"&uid="+user_info_app.get(i).getId()+"'>"+user_info_app.get(i).getName()+"</a>"+
-						"<a href='TeamAddUser?&uid="+user_info_app.get(i).getId()+"&tid="+team.getId()+"'>join</a>"+
+						"<a href='TeamAddUser?&uid="+uid+"&tid="+team.getId()+"&app_uid="+user_info_app.get(i).getId()+"'>join</a>"+
 				"</div>");
 	}
 	out.write("</div>");

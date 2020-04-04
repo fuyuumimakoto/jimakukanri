@@ -201,10 +201,23 @@ private void ApplicationInit(int tid)
 
 public int[] isappGetter(List<Team> tList,int uid)
 {
+	List<member> members;
 	int[] isapp=new int[tList.size()];
 	for(int i=0;i<tList.size();i++)
 	{
-		if(isapp(uid, tList.get(i).getId()))
+		members=TeamMemberGetter(tList.get(i).getId());
+		boolean is_in_memberlist=false;
+		for(int j=0;j<members.size();j++)
+		{
+			if(members.get(j).getUid()==uid)
+			{
+				is_in_memberlist=true;
+				break;
+				
+			}
+		}
+		
+		if(isapp(uid, tList.get(i).getId())||is_in_memberlist)
 		{
 			isapp[i]=1;
 		}
@@ -220,6 +233,8 @@ private boolean isapp(int uid,int tid)
 	int[] alist=ApplicationReader(tid);
 	for(int i=0;i<alist.length;i++)
 	{
+		
+		
 		if (alist[i]==uid) {
 			return true;
 		}
