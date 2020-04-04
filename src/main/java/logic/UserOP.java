@@ -50,7 +50,7 @@ public class UserOP {
 	public void UpdataUser_info_Upicon( MultipartFile file,int uid) throws IllegalStateException, IOException
 	{
 		if (!file.getOriginalFilename().equals("")) {
-   		 String path = FileVar.Absolute_headurl+"//user//"+uid;
+   		 String path = FileVar.Absolute_headurl+"/user/"+uid;
    	        String fileName = file.getOriginalFilename();    
    	        File dir = new File(path,fileName);          
    	        if (!dir.getParentFile().exists()) {
