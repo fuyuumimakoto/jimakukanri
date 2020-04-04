@@ -54,7 +54,7 @@ public List<Team> TeamListGetter(int uid)//get Team list
 
 public boolean isLeader(int uid,int tid)
 {
-	String file=FileVar.Absolute_headurl+"//team//"+ tid+"//memberlist.data";
+	String file=FileVar.Absolute_headurl+"/team/"+ tid+"/memberlist.data";
 	 ObjectInputStream ois=null;
 		try {
 			ois = new ObjectInputStream(new FileInputStream(file));
@@ -93,7 +93,7 @@ if (TeamId.length==1) {
 
 		for(int i=1;i<TeamId.length;i++)
 		{
-			String file=FileVar.Absolute_headurl+"//team//"+ TeamId[i]+"//memberlist.data";
+			String file=FileVar.Absolute_headurl+"/team/"+ TeamId[i]+"/memberlist.data";
 			
 			System.out.print(file+"\n");
 			 ObjectInputStream ois=null;
@@ -177,7 +177,7 @@ private void ApplicationInit(int tid)
 	ObjectOutputStream oos=null;
 	
 	  try {
-		  File f = new File(FileVar.Absolute_headurl+"//team//"+tid+"//Applicationlist.data");
+		  File f = new File(FileVar.Absolute_headurl+"/team/"+tid+"/Applicationlist.data");
 		  if (!f.getParentFile().exists()) {
 	            boolean result = f.getParentFile().mkdirs();
 		  }
@@ -247,7 +247,7 @@ private void ApplicationResave(int[] alist,int tid)
 	ObjectOutputStream oos=null;
 	
 	  try {
-		  File f = new File(FileVar.Absolute_headurl+"//team//"+tid+"//Applicationlist.data");
+		  File f = new File(FileVar.Absolute_headurl+"/team/"+tid+"/Applicationlist.data");
 		  if (!f.getParentFile().exists()) {
 	            boolean result = f.getParentFile().mkdirs();
 		  }
@@ -273,7 +273,7 @@ public int[] ApplicationReader(int tid)
 {
 	  ObjectInputStream ois=null;
 		try {
-			ois = new ObjectInputStream(new FileInputStream(FileVar.Absolute_headurl+"//team//"+tid+"//Applicationlist.data"));
+			ois = new ObjectInputStream(new FileInputStream(FileVar.Absolute_headurl+"/team/"+tid+"/Applicationlist.data"));
 			// 璇诲彇瀵硅薄
 			// Student stu = (Student)ois.readObject();
 			// System.out.println("璇诲彇鍒扮殑鏁版嵁涓�:"+stu);
@@ -317,7 +317,7 @@ private void updata_team_merberlist(int tid,int uid,List<member> members)//
 	 ObjectOutputStream oos=null;
 		
 	  try {
-		  File f = new File(FileVar.Absolute_headurl+"//team//"+tid+"//memberlist.data");
+		  File f = new File(FileVar.Absolute_headurl+"/team/"+tid+"/memberlist.data");
 		  if (!f.getParentFile().exists()) {
 	            boolean result = f.getParentFile().mkdirs();
 		  }
@@ -354,7 +354,7 @@ private void updata_user_teamlist(int tid,int uid)//add the new tid to the teaml
 
 public void teamlistSave(int uid,int[] a)
 {ObjectOutputStream oos=null;
-String url=FileVar.Absolute_headurl+"//user//"+ uid+"//teamlist.data";
+String url=FileVar.Absolute_headurl+"/user/"+ uid+"/teamlist.data";
 try {
 	
 	  File f = new File(url);
@@ -390,7 +390,7 @@ private void Teamcreate(int tid,int uid)//file :save merber list
 	 ObjectOutputStream oos=null;
 		
 	  try {
-		  File f = new File(FileVar.Absolute_headurl+"//team//"+tid+"//memberlist.data");
+		  File f = new File(FileVar.Absolute_headurl+"/team/"+tid+"/memberlist.data");
 		  if (!f.getParentFile().exists()) {
 	            boolean result = f.getParentFile().mkdirs();
 		  }
@@ -454,7 +454,7 @@ private int Teamcreate(String name)//database : only name time and id by ai,   i
 
 public List<member> TeamMemberGetter(int tid)
 {
-	String file=FileVar.Absolute_headurl+"//team//"+ tid+"//memberlist.data";
+	String file=FileVar.Absolute_headurl+"/team/"+ tid+"/memberlist.data";
 	  ObjectInputStream ois=null;
 		try {
 			ois = new ObjectInputStream(new FileInputStream(file));
@@ -484,7 +484,7 @@ public List<member> TeamMemberGetter(int tid)
 public  int[] UserTeamIdGetter(int uid)//get TeamId list for file
 {
 	  
-	String file=FileVar.Absolute_headurl+"//user//"+ uid+"//teamlist.data";
+	String file=FileVar.Absolute_headurl+"/user/"+ uid+"/teamlist.data";
 	  ObjectInputStream ois=null;
 		try {
 			ois = new ObjectInputStream(new FileInputStream(file));
@@ -616,7 +616,7 @@ public List<User_info> TeamUser_infoGetter_app(int tid)
 public void UpdataTeam_info_Upicon( MultipartFile file,int tid) throws IllegalStateException, IOException
 {
 	if (!file.getOriginalFilename().equals("")) {
-		 String path = FileVar.Absolute_headurl+"//team//"+tid;
+		 String path = FileVar.Absolute_headurl+"/team/"+tid;
 	        String fileName = file.getOriginalFilename();    
 	        File dir = new File(path,fileName);          
 	        if (!dir.getParentFile().exists()) {

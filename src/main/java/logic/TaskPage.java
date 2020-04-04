@@ -74,7 +74,7 @@ public class TaskPage {
 	public void FileUp( MultipartFile file,int taskid,int tid) throws IllegalStateException, IOException
 	{
 
-   		 String path = FileVar.Absolute_headurl+"//team//"+tid+"//task//"+taskid;
+   		 String path = FileVar.Absolute_headurl+"/team/"+tid+"/task/"+taskid;
    	        String fileName = file.getOriginalFilename();    
    	        File dir = new File(path,fileName);          
    	        if (!dir.getParentFile().exists()) {
@@ -95,7 +95,7 @@ public class TaskPage {
 
 
 		  ObjectInputStream ois=null;
-String url=FileVar.Absolute_headurl+"//team//"+tid+"//task//"+taskid+".data";
+String url=FileVar.Absolute_headurl+"/team/"+tid+"/task/"+taskid+".data";
 
 try {
 	
@@ -325,7 +325,7 @@ try {
 	public void resave(task_info task_info)
 	{
 		 ObjectOutputStream oos=null;
-		 String url=FileVar.Absolute_headurl+"//team//"+task_info.getTid()+"//task//"+task_info.getId()+".data";
+		 String url=FileVar.Absolute_headurl+"/team/"+task_info.getTid()+"/task/"+task_info.getId()+".data";
 		 ArrayList<task_info> arrayList = new ArrayList<task_info>();
 		 arrayList.add(task_info);
 		  try {
@@ -357,7 +357,7 @@ try {
 	  public static void filesave(task task)
 	  {
 		  ObjectOutputStream oos=null;
-String url=FileVar.Absolute_headurl+"//team//"+task.getTid()+"//task//"+task.getId()+".data";
+String url=FileVar.Absolute_headurl+"/team/"+task.getTid()+"/task/"+task.getId()+".data";
 
 int[] staff_id=new int[task.getPart()*3] ;
 String[] files_name = new String[task.getPart()*3];

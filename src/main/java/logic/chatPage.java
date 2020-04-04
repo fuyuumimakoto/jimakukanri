@@ -69,7 +69,7 @@ public class chatPage {
 	{
 		ObjectOutputStream oos=null;
 
-		String url =FileVar.Absolute_headurl+"//user//"+uid+"//chatlog.data";
+		String url =FileVar.Absolute_headurl+"/user/"+uid+"/chatlog.data";
 		
 		  try {
 			
@@ -187,7 +187,7 @@ private boolean iseixst_num(int[] uidlist,int uid)
 
 public chat_log_file chat_log_fileGetter(int uid)
 {
-	String url =FileVar.Absolute_headurl+"//user//"+uid+"//chatlog.data";
+	String url =FileVar.Absolute_headurl+"/user/"+uid+"/chatlog.data";
 	  ObjectInputStream ois=null;
 		try {
 			ois = new ObjectInputStream(new FileInputStream(url));

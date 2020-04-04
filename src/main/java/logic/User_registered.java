@@ -159,7 +159,7 @@ public class User_registered {
 		set_admin_welcome_meg(uid);
 		ObjectOutputStream oos=null;
 
-		String url =FileVar.Absolute_headurl+"//user//"+uid+"//chatlog.data";
+		String url =FileVar.Absolute_headurl+"/user/"+uid+"/chatlog.data";
 		int[] init= {1};//admin
 		Chat_log chat_log=new Chat_log(1,"welcome");
 		
@@ -200,7 +200,7 @@ public class User_registered {
 	{
 		ObjectOutputStream oos=null;
 
-		String url =FileVar.Absolute_headurl+"//user//"+uid+"//teamlist.data";
+		String url =FileVar.Absolute_headurl+"/user/"+uid+"/teamlist.data";
 		int[] init= {0};
 		  try {
 			
