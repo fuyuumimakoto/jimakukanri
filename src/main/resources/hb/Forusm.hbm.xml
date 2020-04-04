@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="pojo.Forusm" table="forusm">
+      <meta attribute="class-description">
+         This class contains the block detail. 
+      </meta>
+      <id name="id" type="int" column="id">
+         <generator class="native"/>
+      </id>
+      <property name="bid"/>
+      <property name="uid" />
+        <property name="title" />
+ <property name="create_time" />
+ <property name="re_time" />
+
+  
+
+   </class>
+</hibernate-mapping>

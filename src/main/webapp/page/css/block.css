@@ -1,0 +1,112 @@
+body{
+		background-color:#FFFF99;
+}
+/* 导航条 */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+ 
+/* 导航链接 */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 4px 16px;
+  text-decoration: none;
+}
+ 
+/* 链接 - 修改颜色 */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.forusm_area
+{
+	width: 1400px;
+    margin: auto;
+	  overflow: hidden;
+	    border-radius: 20px;
+    margin: auto;
+	background-color:#ffffff;
+
+}
+
+.forusm_1{
+
+}
+.forusm_2{
+
+     	color:#000000;
+	background-color:#EAF2D3;
+}
+
+
+
+table
+{
+		width: 1400px;
+	 margin: auto;
+	border:1px solid black;
+}
+
+td,th
+{
+		font-size:1em;
+	padding:3px 7px 2px 7px;
+}
+td
+{
+	height:50px;
+	vertical-align:bottom;
+}
+ th 
+{
+	font-size:1.1em;
+	text-align:left;
+	padding-top:5px;
+	padding-bottom:4px;
+	background-color:#A7C942;
+	color:#ffffff;
+}
+
+.input
+{
+		width: 1400px;
+	 margin: auto;
+	  text-align: left; 
+
+}
+
+.input_title
+{
+	
+
+	    width: 200px;
+    height: 10px;
+
+}
+
+.input_text
+{
+	
+
+	    width: 1200px;
+    height: 300px;
+
+}
+
+.btn_sumbit {
+    font-size: 14px;
+    font-family: 宋体;
+
+    width: 120px;
+    height: 28px;
+
+    color: white;
+    background-color: #3BD9FF;
+    border-radius: 6px;
+    border: 0;
+
+}

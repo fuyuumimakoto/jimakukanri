@@ -1,0 +1,64 @@
+/* 导航条 */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  	width: 1400px;
+  	    margin: auto;
+}
+ 
+/* 导航链接 */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 4px 16px;
+  text-decoration: none;
+}
+ 
+/* 链接 - 修改颜色 */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+table{
+width: 1400px;
+
+    margin: auto;
+	  overflow: hidden;
+	      background-color:#eba3ba;
+	      border-style:dotted;
+}
+
+.row_1
+{
+		border-right-style:solid;
+}
+td
+{
+		border-bottom-style:dotted;
+}
+.jumper
+{
+	  overflow: hidden;
+  background-color: #333;
+  	width: 1400px;
+  	    margin: auto;
+	 
+}
+.pagejumper input
+{
+	 	width: 20px;
+}
+.re
+{
+	  overflow: hidden;
+  background-color: #333;
+  	width: 1400px;
+  	    margin: auto;
+}
+.re textarea
+{	    margin: auto;
+	width: 1400px;
+}
